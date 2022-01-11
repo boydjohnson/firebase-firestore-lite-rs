@@ -1,5 +1,5 @@
 [package]
-name = "firebase-firestore-lite-rs"
+name = "firebase-firestore-lite"
 version = "0.0.1"
 edition = "2021"
 
