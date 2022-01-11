@@ -2,8 +2,16 @@
   "name": "firebase-firestore-lite-rs",
   "version": "0.0.1",
   "description": "Rust bindings to firestore lite",
+  "main": "dist/index.js",
+  "type": "module",
+  "source": "index.js",
+  "targets": {
+    "main": {
+      "includeNodeModules": true
+    }
+  },
   "scripts": {
-    "build": "parcel build index.html",
+    "build": "parcel build --no-optimize",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

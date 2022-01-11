@@ -1,2 +1,2 @@
-import { initializeApp } from "firebase/app";
-import { getFireStore, collection, getDocs } from "firebase/firestore/lite";
+export { initializeApp } from "@firebase/app";
+export { getFirestore, collection, getDocs } from "@firebase/firestore/lite";

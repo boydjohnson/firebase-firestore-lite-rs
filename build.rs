@@ -1,12 +1,8 @@
-use std::fs::copy;
-
-use glob::glob;
 use npm_rs::Npm;
 
 fn main() {
+    println!("cargo:rerun-if-changed=index.js");
+    println!("cargo:rerun-if-changed=package.json");
+
     Npm::default().install(None).run("build").exec().unwrap();
-
-    let js_file = glob("dist/index*.js").unwrap().next().unwrap().unwrap();
-
-    copy(js_file, "dist/main.js").unwrap();
 }
