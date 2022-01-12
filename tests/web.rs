@@ -9,5 +9,5 @@ use firebase_firestore_lite::FirebaseOptions;
 fn test_intialize_app() {
     let options = FirebaseOptions::new("example".into());
 
-    let firebase_app = initialize_app(options, None);
+    assert!(initialize_app(options, None).is_err());
 }
