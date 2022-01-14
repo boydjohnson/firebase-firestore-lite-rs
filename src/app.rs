@@ -1,7 +1,7 @@
 use wasm_bindgen::prelude::*;
 
+#[derive(Debug, Clone)]
 #[wasm_bindgen(getter_with_clone)]
-#[derive(Debug)]
 pub struct FirebaseApp {
     #[wasm_bindgen(js_name = "automaticDataCollectionEnabled")]
     pub automatic_data_collection_enabled: bool,

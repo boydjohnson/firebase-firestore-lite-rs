@@ -1,4 +1,5 @@
 use crate::app::{FirebaseApp, FirebaseOptions};
+use store::{Firestore, FirestoreSettings};
 use wasm_bindgen::prelude::*;
 
 pub mod app;
@@ -12,5 +13,11 @@ extern "C" {
         options: FirebaseOptions,
         name: Option<String>,
     ) -> Result<FirebaseApp, JsValue>;
+
+    #[wasm_bindgen(js_name = "initializeFirestore", catch)]
+    pub fn initialize_firestore(
+        app: FirebaseApp,
+        settings: FirestoreSettings,
+    ) -> Result<Firestore, JsValue>;
 
 }

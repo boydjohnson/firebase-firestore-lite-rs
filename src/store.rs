@@ -1,3 +1,4 @@
+use crate::app::FirebaseApp;
 use wasm_bindgen::prelude::*;
 
 #[derive(Debug, Clone, Default)]
@@ -49,4 +50,11 @@ impl FirestoreSettings {
         self.ssl = Some(yes);
         self
     }
+}
+
+#[wasm_bindgen(getter_with_clone)]
+pub struct Firestore {
+    pub app: FirebaseApp,
+    #[wasm_bindgen(js_name = "type")]
+    pub kind: String,
 }
