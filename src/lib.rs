@@ -2,6 +2,7 @@ use crate::app::{FirebaseApp, FirebaseOptions};
 use wasm_bindgen::prelude::*;
 
 pub mod app;
+pub mod store;
 
 #[wasm_bindgen(module = "/dist/index.js")]
 extern "C" {
