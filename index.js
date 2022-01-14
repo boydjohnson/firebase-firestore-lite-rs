@@ -1,2 +1,2 @@
 export { initializeApp } from "@firebase/app";
-export { getFirestore, collection, getDocs } from "@firebase/firestore/lite";
+export { getFirestore, collection, getDocs, initializeFirestore } from "@firebase/firestore/lite";
