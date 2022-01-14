@@ -2,8 +2,7 @@ use wasm_bindgen_test::*;
 
 wasm_bindgen_test_configure!(run_in_browser);
 
-use firebase_firestore_lite::initialize_app;
-use firebase_firestore_lite::FirebaseOptions;
+use firebase_firestore_lite::{initialize_app, FirebaseOptions};
 
 #[wasm_bindgen_test]
 fn test_intialize_app() {
